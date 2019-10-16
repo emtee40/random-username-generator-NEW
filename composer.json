@@ -12,5 +12,10 @@
         "psr-4": {
             "Uptodown\\RandomUsernameGenerator\\": "src/"
         }
+    },
+    "require-dev": {
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phpunit/phpunit": "^8.1",
+        "friendsofphp/php-cs-fixer": "^2.15"
     }
 }
