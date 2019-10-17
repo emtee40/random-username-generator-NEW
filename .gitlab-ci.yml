@@ -17,14 +17,20 @@ build:
     expire_in: 1 week
     paths:
       - vendor/
+  tags:
+    - staging
 
 lint:
   stage: lint
   script:
     - ./vendor/bin/parallel-lint -j 4 --blame src
     - ./vendor/bin/parallel-lint -j 4 --blame tests
+  tags:
+    - staging
 
 test:
   stage: test
   script:
-    - ./vendor/bin/phpunit --configuration phpunit.xml
+    - ./vendor/bin/phpunit --configuration phpunit_unit.xml --coverage-text
+  tags:
+    - staging
