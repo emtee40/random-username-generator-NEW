@@ -31,6 +31,6 @@ lint:
 test:
   stage: test
   script:
-    - ./vendor/bin/phpunit --configuration phpunit_unit.xml --coverage-text
+    - ./vendor/bin/phpunit --configuration phpunit.xml
   tags:
     - staging
